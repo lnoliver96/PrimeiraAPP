@@ -13,19 +13,18 @@ public class NextActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-//        O conteudo é renderizado na tela
         setContentView(R.layout.activity_next);
 
-
+//        Obtem o intent que criou essa tela
         Intent i = getIntent();
 
-
+//        Obtem o texto que veio da tela anterior junto com a intent
         String texto = i.getStringExtra("texto");
 
-
+//        Obtem o textView
         TextView tvTexto = findViewById(R.id.tvTexto);
 
+//        Seta o texto no TextView
         tvTexto.setText(texto);
 
     }
